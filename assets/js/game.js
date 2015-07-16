@@ -39,8 +39,8 @@ var Game = {
         game.add.text(30, 20, "SCORE", textStyle_Key);
         scoreTextValue = game.add.text(90, 18, score.toString(), textStyle_Value);
         // Speed.
-        game.add.text(500, 20, "SPEED", textStyle_Key);
-        speedTextValue = game.add.text(558, 18, speed.toString(), textStyle_Value);
+        game.add.text(1000, 20, "SPEED", textStyle_Key);
+        speedTextValue = game.add.text(1000, 18, speed.toString(), textStyle_Value);
 
     },
 
@@ -124,8 +124,8 @@ var Game = {
     generateApple: function(){
 
         
-        var randomX = Math.floor(Math.random() * 40 ) * squareSize,
-            randomY = Math.floor(Math.random() * 30 ) * squareSize;
+        var randomX = Math.floor(Math.random() * 30 ) * squareSize,
+            randomY = Math.floor(Math.random() * 40 ) * squareSize;
 
         apple = game.add.sprite(randomX, randomY, 'apple');
     },
@@ -165,7 +165,7 @@ var Game = {
     wallCollision: function(head) {
 
 
-        if(head.x >= 600 || head.x < 0 || head.y >= 450 || head.y < 0){
+        if(head.x >= 1366 || head.x < 0 || head.y >= 673 || head.y < 0){
 
 
             game.state.start('Game_Over');
